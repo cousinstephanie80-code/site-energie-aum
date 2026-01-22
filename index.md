@@ -90,27 +90,29 @@ description: Cabinet de soins énergétiques Energie de l'Aum à Marseillan. Mé
 </div>
 
 <div class="testimonials">
-  <h2>Ce qu'ils en pensent</h2>
+  <h2>Livre d'Or</h2>
+  
   <div class="carousel-container">
     
     <div class="carousel-slide active">
-      <div class="google-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" width="15"> Avis Google</div>
-      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <div class="avatar-wrapper avatar-femme"></div> <div class="google-badge">G Avis Google</div>
+      <div class="stars">★★★★★</div>
       <p class="quote">"Une expérience incroyable. Mélanie est d'une douceur absolue. Le soin m'a fait un bien fou, je recommande les yeux fermés !"</p>
       <p><strong>— Sophie Martin</strong></p>
     </div>
 
     <div class="carousel-slide">
-      <div class="google-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" width="15"> Avis Google</div>
-      <div class="stars">⭐⭐⭐⭐⭐</div>
-      <p class="quote">"J'ai suivi la formation Reiki niveau 1. Le support Ebook est très clair et Mélanie est très pédagogue. Merci pour tout."</p>
+      <div class="avatar-wrapper avatar-homme"></div> <div class="google-badge">G Avis Google</div>
+      <div class="stars">★★★★★</div>
+      <p class="quote">"J'ai suivi la formation Reiki niveau 1. Le support est très clair et l'approche de Mélanie est très professionnelle."</p>
       <p><strong>— Jean Dupont</strong></p>
     </div>
 
     <div class="carousel-slide">
-      <div class="google-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" width="15"> Avis Google</div>
-      <div class="stars">⭐⭐⭐⭐⭐</div>
-      <p class="quote">"Soin à distance très puissant. J'étais sceptique mais j'ai ressenti beaucoup de chaleur. Je me sens beaucoup plus légère."</p>
+      <div class="avatar-wrapper avatar-femme"></div>
+      <div class="google-badge">G Avis Google</div>
+      <div class="stars">★★★★★</div>
+      <p class="quote">"Soin à distance très puissant. J'étais sceptique mais j'ai ressenti beaucoup de chaleur. Un vrai moment de déconnexion."</p>
       <p><strong>— Camille L.</strong></p>
     </div>
 
@@ -120,29 +122,23 @@ description: Cabinet de soins énergétiques Energie de l'Aum à Marseillan. Mé
 </div>
 
 <script>
-let slideIndex = 1;
-showSlides(slideIndex);
-
-// Fonction pour avancer/reculer
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("carousel-slide");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-    slides[i].classList.remove("active");
+document.addEventListener("DOMContentLoaded", function() {
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  window.plusSlides = function(n) { showSlides(slideIndex += n); }
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("carousel-slide");
+    if (slides.length === 0) return;
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+      slides[i].classList.remove("active");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    slides[slideIndex-1].classList.add("active");
   }
-  slides[slideIndex-1].style.display = "block";  
-  slides[slideIndex-1].classList.add("active");
-}
-
-// Auto-play (change toutes les 5 secondes)
-setInterval(function() {
-  plusSlides(1);
-}, 5000);
+  setInterval(function() { plusSlides(1); }, 7000); // 7 secondes pour lire tranquillement
+});
 </script>

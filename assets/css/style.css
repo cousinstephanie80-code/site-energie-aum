@@ -1,46 +1,53 @@
-/* --- COULEURS & AMBIANCE ZEN --- */
+/* --- AMBIANCE ZEN & LUXE (5 ÉTOILES) --- */
+
+/* Importation des Polices de Luxe */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
 :root {
-  --primary: #8E6BC7;       /* Violet doux */
-  --secondary: #D4AF37;     /* Doré chic */
-  --bg-cream: #FAF9F6;      /* Blanc cassé très pur */
-  --text-dark: #4A4A4A;     /* Gris anthracite (plus doux que noir) */
+  /* Palette Validée */
+  --primary: #4A5D45;       /* Vert Sauge Profond (Nature & Sérénité) */
+  --secondary: #C5A059;     /* Or Mat (Luxe & Lumière) */
+  --bg-cream: #F9F8F6;      /* Pierre de Lune (Douceur) */
   --white: #FFFFFF;
+  --text-dark: #2C3E30;     /* Vert très sombre (plus élégant que le noir) */
+  --text-light: #6B7C70;    /* Gris-Vert doux */
 }
 
 body {
   background-color: var(--bg-cream);
   color: var(--text-dark);
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Lato', sans-serif; /* Police moderne pour la lecture */
   margin: 0;
   padding: 0;
-  line-height: 1.8; /* Texte aéré */
+  line-height: 1.8;
+  font-weight: 300; /* Texte fin et élégant */
 }
 
 /* --- TYPOGRAPHIE --- */
 h1, h2, h3 {
-  font-family: 'Georgia', serif; /* Touche élégante */
-  color: #5D4037; /* Marron glacé */
+  font-family: 'Playfair Display', serif; /* Police "Vogue" pour les titres */
+  color: var(--primary);
   text-align: center;
+  font-weight: 400;
 }
 
-h1 { font-size: 2.8em; margin-bottom: 0.2em; }
-h2 { font-size: 2em; margin-top: 60px; position: relative; }
+h1 { font-size: 3.2em; margin-bottom: 0.2em; letter-spacing: -1px; }
+h2 { font-size: 2.2em; margin-top: 60px; position: relative; margin-bottom: 40px; }
 
-/* Petite ligne dorée sous les titres */
+/* Petite feuille dorée sous les titres */
 h2::after {
-  content: "";
+  content: "✦";
   display: block;
-  width: 60px;
-  height: 3px;
-  background-color: var(--secondary);
-  margin: 15px auto 0;
+  color: var(--secondary);
+  font-size: 20px;
+  margin-top: 10px;
 }
 
-/* --- HEADER & NAVIGATION --- */
+/* --- HEADER & MENU --- */
 header {
   background: var(--white);
   padding: 15px 40px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(74, 93, 69, 0.1); /* Ligne subtile */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -49,201 +56,203 @@ header {
   z-index: 1000;
 }
 
-.logo img { height: 60px; } /* Taille du logo */
+.logo img { height: 65px; }
 
 nav a {
   text-decoration: none;
   color: var(--text-dark);
-  font-weight: 500;
-  margin-left: 30px;
-  text-transform: uppercase;
-  font-size: 0.9em;
-  letter-spacing: 1px;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.1em;
+  margin-left: 35px;
   transition: color 0.3s;
 }
 
-nav a:hover { color: var(--primary); }
+nav a:hover { color: var(--secondary); }
 
 /* --- BANNIÈRE HERO --- */
 .hero {
   position: relative;
-  height: 70vh; /* Prend 70% de la hauteur de l'écran */
+  height: 75vh;
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white;
 }
 
-/* Voile sombre pour lire le texte sur l'image */
 .hero::before {
   content: "";
   position: absolute;
   top:0; left:0; right:0; bottom:0;
-  background: rgba(0,0,0,0.3);
+  background: rgba(44, 62, 48, 0.3); /* Voile vert sombre très léger */
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 800px;
-  padding: 20px;
+  max-width: 900px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1); /* Effet verre dépoli */
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255,255,255,0.3);
 }
 
-.hero h1 { color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
-.hero p { font-size: 1.3em; margin-bottom: 30px; color: #f0f0f0; }
+.hero h1 { color: white; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+.hero h2 { color: #f0f0f0; margin-top: 10px; font-size: 1.4em; }
+.hero h2::after { content: none; } /* Pas de feuille sous le sous-titre */
 
+/* Bouton Luxe Doré */
 .btn-doré {
   background-color: var(--secondary);
   color: white;
-  padding: 15px 30px;
+  padding: 18px 35px;
   text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-  text-transform: uppercase;
+  border-radius: 2px; /* Coins carrés chics */
+  font-family: 'Playfair Display', serif;
   letter-spacing: 1px;
-  transition: transform 0.2s;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  transition: all 0.3s;
   display: inline-block;
+  margin-top: 20px;
+  border: 1px solid var(--secondary);
 }
-.btn-doré:hover { transform: scale(1.05); background-color: #bfa030; }
 
-/* --- SECTION QUI SUIS-JE --- */
-.container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+.btn-doré:hover {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+/* --- CONTENEUR & SECTIONS --- */
+.container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
 
 .bio-section {
   display: flex;
   align-items: center;
-  gap: 40px;
-  margin: 60px 0;
+  gap: 60px;
+  background: white;
+  padding: 60px;
+  border: 1px solid #eee;
+  box-shadow: 0 10px 30px rgba(74, 93, 69, 0.05); /* Ombre verte très légère */
 }
 
 .bio-img img {
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   object-fit: cover;
-  border-radius: 50%; /* Image ronde */
-  border: 5px solid white;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  border-radius: 50%;
+  border: 1px solid var(--secondary);
+  padding: 10px; /* Espace entre photo et bordure */
 }
 
-.bio-text { flex: 1; }
-
-/* --- CARTES PRESTATIONS --- */
-.services-grid {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
+/* --- CARTES PRESTATIONS (Design Épuré) --- */
 .card {
   background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  width: 300px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-  transition: transform 0.3s;
+  padding: 40px 30px;
+  border: 1px solid #f0f0f0;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   text-align: center;
-  padding-bottom: 20px;
+  position: relative;
+  overflow: hidden;
 }
 
-.card:hover { transform: translateY(-5px); }
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(197, 160, 89, 0.15); /* Ombre dorée au survol */
+  border-color: var(--secondary);
+}
 
-.card h3 { color: var(--primary); margin: 15px 0; }
-.card-price { font-size: 1.2em; font-weight: bold; color: var(--text-dark); margin: 10px 0; display: block; }
+.card h3 { font-size: 1.5em; margin-bottom: 10px; color: var(--primary); }
+.card-price { font-family: 'Playfair Display', serif; font-size: 1.3em; color: var(--secondary); display: block; margin: 20px 0; }
 
 .btn-reserver {
   display: inline-block;
-  background-color: var(--primary);
-  color: white;
+  border: 1px solid var(--primary);
+  color: var(--primary);
   padding: 10px 25px;
-  border-radius: 20px;
   text-decoration: none;
-  font-size: 0.9em;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.3s;
 }
 
-/* --- TÉMOIGNAGES --- */
+.btn-reserver:hover { background: var(--primary); color: white; }
+
+/* --- CARROUSEL AVIS (Design Cartes avec Avatar) --- */
 .testimonials {
-  background-color: #F3E5F5; /* Violet très très pâle */
-  padding: 60px 20px;
-  text-align: center;
-  margin-top: 60px;
+  background-color: #EFEHE8; /* Beige un peu plus soutenu */
+  padding: 80px 20px;
+  border-top: 1px solid #e0e0e0;
 }
 
-.quote {
-  font-style: italic;
-  font-size: 1.1em;
-  max-width: 700px;
-  margin: 0 auto;
-  color: #555;
-}
-
-/* --- RESPONSIVE (MOBILE) --- */
-@media (max-width: 768px) {
-  .bio-section { flex-direction: column; text-align: center; }
-  .hero h1 { font-size: 2em; }
-  header { flex-direction: column; gap: 10px; }
-  nav a { margin: 0 10px; font-size: 0.8em; }
-/* --- CARROUSEL D'AVIS --- */
 .carousel-container {
-  max-width: 800px;
+  max-width: 750px;
   margin: 0 auto;
   position: relative;
-  overflow: hidden;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(142, 107, 199, 0.1);
-  padding: 40px 20px;
+  min-height: 350px;
 }
 
 .carousel-slide {
-  display: none; /* On cache tout par défaut */
-  animation: fadeEffect 1s; /* Petit effet d'apparition */
+  display: none;
+  background: white;
+  padding: 50px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+  border-top: 3px solid var(--secondary); /* Ligne dorée en haut */
+  animation: fadeUp 1s ease;
 }
 
-/* On affiche celui qui a la classe "active" */
-.carousel-slide.active {
-  display: block;
+.carousel-slide.active { display: block; }
+
+/* LES AVATARS (Ronds avec icônes) */
+.avatar-wrapper {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background-color: #F5F5F5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--secondary);
+  font-size: 35px; /* Taille de l'icône */
 }
+
+.avatar-homme::before { content: "👨🏻"; } /* Icône homme */
+.avatar-femme::before { content: "👩🏻"; } /* Icône femme */
 
 .google-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: #fff;
-  border: 1px solid #ddd;
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 0.8em;
-  color: #555;
-  margin-bottom: 20px;
+  background: white; border: 1px solid #ddd;
+  color: #555; padding: 5px 15px; border-radius: 20px;
+  font-size: 0.75em; text-transform: uppercase; letter-spacing: 1px;
+  display: inline-block; margin-bottom: 15px;
 }
 
-.stars { color: #FFD700; letter-spacing: 2px; font-size: 1.2em; }
+.stars { color: var(--secondary); letter-spacing: 5px; margin-bottom: 20px; font-size: 1.2em; }
+.quote { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.3em; color: var(--text-dark); margin-bottom: 30px; }
 
-/* Boutons Précédent / Suivant */
+/* Flèches Navigation */
 .prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: var(--primary);
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  user-select: none;
+  cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%);
+  width: 50px; height: 50px; line-height: 50px; text-align: center;
+  color: var(--primary); border: 1px solid var(--primary); border-radius: 50%;
+  font-size: 20px; transition: 0.3s;
+}
+.prev:hover, .next:hover { background: var(--primary); color: white; }
+.next { right: -70px; }
+.prev { left: -70px; }
+
+@media (max-width: 850px) {
+  .bio-section { flex-direction: column; text-align: center; padding: 30px; }
+  .next { right: 0; background: white; }
+  .prev { left: 0; background: white; }
 }
 
-.next { right: 0; border-radius: 3px 0 0 3px; }
-.prev { left: 0; border-radius: 0 3px 3px 0; }
-.prev:hover, .next:hover { background-color: rgba(142, 107, 199, 0.1); }
-
-@keyframes fadeEffect {
-  from {opacity: 0.4}
-  to {opacity: 1}
-}
+@keyframes fadeUp {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
 }
