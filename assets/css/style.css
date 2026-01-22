@@ -186,4 +186,64 @@ nav a:hover { color: var(--primary); }
   .hero h1 { font-size: 2em; }
   header { flex-direction: column; gap: 10px; }
   nav a { margin: 0 10px; font-size: 0.8em; }
+/* --- CARROUSEL D'AVIS --- */
+.carousel-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(142, 107, 199, 0.1);
+  padding: 40px 20px;
+}
+
+.carousel-slide {
+  display: none; /* On cache tout par défaut */
+  animation: fadeEffect 1s; /* Petit effet d'apparition */
+}
+
+/* On affiche celui qui a la classe "active" */
+.carousel-slide.active {
+  display: block;
+}
+
+.google-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.stars { color: #FFD700; letter-spacing: 2px; font-size: 1.2em; }
+
+/* Boutons Précédent / Suivant */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
+}
+
+.next { right: 0; border-radius: 3px 0 0 3px; }
+.prev { left: 0; border-radius: 0 3px 3px 0; }
+.prev:hover, .next:hover { background-color: rgba(142, 107, 199, 0.1); }
+
+@keyframes fadeEffect {
+  from {opacity: 0.4}
+  to {opacity: 1}
+}
 }
