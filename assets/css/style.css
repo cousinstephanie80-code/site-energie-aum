@@ -1,77 +1,189 @@
-/* --- COULEURS ET POLICES --- */
+/* --- COULEURS & AMBIANCE ZEN --- */
 :root {
-  --main-purple: #8e6bc7; /* Le violet de vos boutons */
-  --bg-cream: #f9f5f0;    /* Le fond beige doux */
-  --text-dark: #4a4a4a;   /* Gris foncé pour le texte (plus doux que le noir) */
-  --accent-gold: #d4af37; /* Pour les petites touches dorées si besoin */
+  --primary: #8E6BC7;       /* Violet doux */
+  --secondary: #D4AF37;     /* Doré chic */
+  --bg-cream: #FAF9F6;      /* Blanc cassé très pur */
+  --text-dark: #4A4A4A;     /* Gris anthracite (plus doux que noir) */
+  --white: #FFFFFF;
 }
 
 body {
   background-color: var(--bg-cream);
   color: var(--text-dark);
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  line-height: 1.6;
   margin: 0;
   padding: 0;
+  line-height: 1.8; /* Texte aéré */
 }
 
-/* --- TITRES --- */
+/* --- TYPOGRAPHIE --- */
 h1, h2, h3 {
-  color: #6d4c41; /* Marron glacé comme sur votre site */
-  font-family: 'Georgia', serif; /* Police avec empattement pour l'élégance */
+  font-family: 'Georgia', serif; /* Touche élégante */
+  color: #5D4037; /* Marron glacé */
   text-align: center;
 }
 
-h1 { margin-top: 40px; font-size: 2.5em; }
-h2 { color: var(--main-purple); margin-top: 30px; }
+h1 { font-size: 2.8em; margin-bottom: 0.2em; }
+h2 { font-size: 2em; margin-top: 60px; position: relative; }
 
-/* --- LIENS ET BOUTONS --- */
-a {
-  color: var(--main-purple);
-  text-decoration: none;
-  font-weight: bold;
+/* Petite ligne dorée sous les titres */
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--secondary);
+  margin: 15px auto 0;
 }
 
-a:hover { text-decoration: underline; }
+/* --- HEADER & NAVIGATION --- */
+header {
+  background: var(--white);
+  padding: 15px 40px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-/* Création d'un style "bouton" pour vos liens de réservation */
-a[href*="contact"] {
-  display: inline-block;
-  background-color: var(--main-purple);
+.logo img { height: 60px; } /* Taille du logo */
+
+nav a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  margin-left: 30px;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+nav a:hover { color: var(--primary); }
+
+/* --- BANNIÈRE HERO --- */
+.hero {
+  position: relative;
+  height: 70vh; /* Prend 70% de la hauteur de l'écran */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  text-align: center;
-  margin: 20px auto;
-  display: block;
-  width: fit-content;
-  text-decoration: none;
 }
 
-/* --- STRUCTURE --- */
-main {
+/* Voile sombre pour lire le texte sur l'image */
+.hero::before {
+  content: "";
+  position: absolute;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.3);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
   max-width: 800px;
-  margin: 0 auto; /* Centre le contenu */
   padding: 20px;
-  background-color: white; /* Une colonne blanche au centre */
-  box-shadow: 0 0 15px rgba(0,0,0,0.05); /* Légère ombre */
 }
 
-/* --- IMAGES --- */
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  display: block;
-  margin: 20px auto;
+.hero h1 { color: white; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+.hero p { font-size: 1.3em; margin-bottom: 30px; color: #f0f0f0; }
+
+.btn-doré {
+  background-color: var(--secondary);
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: transform 0.2s;
+  display: inline-block;
+}
+.btn-doré:hover { transform: scale(1.05); background-color: #bfa030; }
+
+/* --- SECTION QUI SUIS-JE --- */
+.container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+
+.bio-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 60px 0;
 }
 
-/* --- NAVIGATION --- */
-nav {
-  background-color: white;
-  padding: 15px;
+.bio-img img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%; /* Image ronde */
+  border: 5px solid white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.bio-text { flex: 1; }
+
+/* --- CARTES PRESTATIONS --- */
+.services-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
   text-align: center;
-  border-bottom: 3px solid var(--main-purple);
+  padding-bottom: 20px;
 }
-nav a { margin: 0 15px; color: var(--text-dark); }
-nav a:hover { color: var(--main-purple); text-decoration: none; }
+
+.card:hover { transform: translateY(-5px); }
+
+.card h3 { color: var(--primary); margin: 15px 0; }
+.card-price { font-size: 1.2em; font-weight: bold; color: var(--text-dark); margin: 10px 0; display: block; }
+
+.btn-reserver {
+  display: inline-block;
+  background-color: var(--primary);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+/* --- TÉMOIGNAGES --- */
+.testimonials {
+  background-color: #F3E5F5; /* Violet très très pâle */
+  padding: 60px 20px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 1.1em;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #555;
+}
+
+/* --- RESPONSIVE (MOBILE) --- */
+@media (max-width: 768px) {
+  .bio-section { flex-direction: column; text-align: center; }
+  .hero h1 { font-size: 2em; }
+  header { flex-direction: column; gap: 10px; }
+  nav a { margin: 0 10px; font-size: 0.8em; }
+}

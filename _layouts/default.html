@@ -9,18 +9,19 @@
 </head>
 <body>
 
-  <nav>
-    <a href="/">Accueil</a>
-    <a href="#">Soins</a> <a href="#">Événements</a> <a href="mailto:votre-email@gmail.com">Contact</a>
-  </nav>
-
-  <main>
-    {{ content }}
-  </main>
-
-  <footer style="text-align: center; padding: 20px; font-size: 0.8em; color: #777;">
-    <p>&copy; 2026 Energie de l'Aum. Tous droits réservés.</p>
-  </footer>
+ <header>
+    <div class="logo">
+      <a href="/">
+        <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Energie de l'Aum">
+      </a>
+    </div>
+    <nav>
+      <a href="{{ '/' | relative_url }}">Accueil</a>
+      <a href="{{ '/soins.html' | relative_url }}">Soins</a>
+      <a href="#tarifs">Réserver</a>
+      <a href="mailto:votre-email@gmail.com">Contact</a>
+    </nav>
+  </header>
 
 </body>
 </html>

@@ -1,42 +1,69 @@
 ---
 layout: default
-title: Soins Reiki, LaHoChi & Formations à Agde
-description: Mélanie, praticienne et formatrice certifiée, vous propose des soins énergétiques (Reiki, LaHoChi, Merkabah) sur le Bassin de Thau (Agde, Sète, Béziers).
+title: Energie de l'Aum | Soins Reiki & Formations à Agde
+description: Cabinet de soins énergétiques (Reiki, LaHoChi) et formations certifiantes. Prenez rendez-vous en ligne pour apaiser votre mental.
 ---
 
-# Bienvenue chez Energie de l'Aum
+<div class="hero" style="background-image: url('assets/images/banniere-accueil.jpg');">
+  <div class="hero-content">
+    <h1>Retrouvez l'Harmonie Intérieure</h1>
+    <p>Soins Énergétiques Reiki, LaHoChi & Merkabah<br>Agde & Bassin de Thau</p>
+    <a href="#tarifs" class="btn-doré">Prendre Rendez-vous</a>
+  </div>
+</div>
 
-## 🌿 Reiki, Lahochi & Merkabah
-**Soins en présentiel dans le secteur de Agde / Bassin de Thau (et ses environs) & à distance.**
+<div class="container">
 
-Énergie de l'Aum propose des soins énergétiques — Reiki, Lahochi et Merkabah — réalisés en présentiel sur rendez-vous (**secteur Agde / Bassin de Thau**), ainsi qu’à distance.
+  <div class="bio-section">
+    <div class="bio-img">
+      <img src="assets/images/portrait.jpg" alt="Mélanie Energie de l'Aum">
+    </div>
+    <div class="bio-text">
+      <h2>Bienvenue, je suis Mélanie</h2>
+      <p>Praticienne en Reiki, Lahochi et Soin Merkabah, et formatrice certifiée.</p>
+      <p>J’accompagne chaque personne avec douceur et bienveillance pour apaiser le mental, relâcher les tensions et rééquilibrer l’énergie.</p>
+      <p>Que ce soit en présentiel à <strong>Agde</strong> ou à distance, je vous propose un espace d'écoute et de transformation adapté à votre rythme intérieur.</p>
+    </div>
+  </div>
 
-Chaque séance favorise l'apaisement du mental, la détente et l'harmonisation énergétique.
+  <h2 id="tarifs">Mes Soins & Formations</h2>
+  <p style="text-align: center; margin-bottom: 40px;">Choisissez votre soin pour réserver votre créneau.</p>
 
-> ⚠️ *Ces pratiques ne remplacent pas un avis ou un suivi médical.*
+  <div class="services-grid">
+    
+    <div class="card">
+      <h3>Soin Reiki</h3>
+      <p>Harmonisation énergétique complète.</p>
+      <span class="card-price">50 € / Séance</span>
+      <p style="font-size: 0.9em; color: #777;">Durée : 1h00</p>
+      <a href="#" class="btn-reserver">Réserver</a>
+    </div>
 
----
+    <div class="card">
+      <h3>Soin LaHoChi</h3>
+      <p>Haute fréquence de guérison.</p>
+      <span class="card-price">50 € / Séance</span>
+      <p style="font-size: 0.9em; color: #777;">Durée : 1h00</p>
+      <a href="#" class="btn-reserver">Réserver</a>
+    </div>
 
-### Qui suis-je ?
+    <div class="card">
+      <h3>Formations</h3>
+      <p>Devenez praticien certifié.</p>
+      <span class="card-price">Sur devis</span>
+      <p style="font-size: 0.9em; color: #777;">Niveau I, II et III</p>
+      <a href="mailto:votre-email@gmail.com" class="btn-reserver">Me contacter</a>
+    </div>
 
-**Je suis Mélanie, praticienne en Reiki, Lahochi et Soin Merkabah, et formatrice certifiée.**
+  </div>
 
-J'accompagne chaque personne avec douceur et bienveillance, pour apaiser le mental, relâcher les tensions et rééquilibrer l'énergie.
+</div>
 
-En présentiel ou à distance, je vous propose un accompagnement intuitif et respectueux, adapté à votre rythme intérieur.
-
-![Portrait de Mélanie](assets/images/portrait.jpg)
-
----
-
-### 📍 Lieu des soins & Contact
-
-**Soins en Présentiel : Secteur Agde / Bassin de Thau**
-Je vous reçois uniquement **sur rendez-vous** dans un cadre serein et adapté (lieu de soin ponctuel ou cabinet partenaires) pour vous garantir une attention exclusive et confidentielle.
-
-**Zone d'Intervention :**
-Services accessibles facilement depuis Sète, Agde, Béziers et l'ensemble des communes du Bassin de Thau (Marseillan, Mèze, Balaruc, etc.).
-
-📞 **06 22 92 20 47**
-
-[Me contacter par email](mailto:votre-email@gmail.com)
+<div class="testimonials">
+  <h2>Ce qu'ils en pensent</h2>
+  <div class="quote">
+    <p>⭐⭐⭐⭐⭐</p>
+    <p>"Énergie de l'Aum a dépassé toutes mes attentes ! Dès que j'ai franchi la porte, une sensation de paix m'a envahie. Le soin Reiki que j'ai reçu a été véritablement transformateur."</p>
+    <p><strong>— Un client satisfait</strong></p>
+  </div>
+</div>
