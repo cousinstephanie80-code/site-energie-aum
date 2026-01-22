@@ -3,11 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title }} | {{ site.title }}</title>
-  
+  <title>{{ page.title }} | Energie de l'Aum</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-  
-  <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Helvetica+Neue:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
@@ -17,21 +15,35 @@
         <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Energie de l'Aum">
       </a>
     </div>
+
     <nav>
-      <a href="{{ '/' | relative_url }}">ACCUEIL</a>
-      <a href="{{ '/soins.html' | relative_url }}">SOINS</a>
-      <a href="#tarifs">RÉSERVER</a>
-      <a href="mailto:votre-email@gmail.com">CONTACT</a>
+      <a href="{{ '/' | relative_url }}">À PROPOS</a> <a href="{{ '/soins.html' | relative_url }}">SOINS</a>
+      <a href="{{ '/index.html#formations' | relative_url }}">FORMATIONS</a> <a href="mailto:votre-email@gmail.com">CONTACT</a>
     </nav>
+
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
   </header>
 
   <main>
     {{ content }}
   </main>
 
-  <footer style="text-align: center; padding: 40px 20px; font-size: 0.8em; color: #777; border-top: 1px solid #d4af37; margin-top: 50px; background: white;">
+  <div class="chat-widget">
+    <div class="chat-message">
+      Bonjour, n'hésitez pas à me laisser un message pour plus de renseignements. Je vous recontacte rapidement.<br><br>
+      À très vite,<br><strong>Mélanie - Energie de l'Aum</strong>
+    </div>
+    <a href="mailto:votre-email@gmail.com" class="chat-button">
+      <i class="fas fa-comment-dots"></i>
+    </a>
+  </div>
+
+  <footer style="text-align: center; padding: 40px 20px; font-size: 0.8em; color: #777; border-top: 1px solid #eee; margin-top: 50px;">
     <p>&copy; 2026 Energie de l'Aum. Tous droits réservés.</p>
-    <p><strong>Marseillan • Maraussan • Bassin de Thau</strong></p>
+    <p>Marseillan • Maraussan • Bassin de Thau</p>
   </footer>
 
 </body>

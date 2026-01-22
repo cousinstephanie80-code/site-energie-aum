@@ -1,120 +1,144 @@
-/* --- AMBIANCE ZEN, AÉRÉE & ORGANIQUE --- */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 
 :root {
-  --primary: #4A2C4A;       /* Aubergine (Votre identité) */
-  --secondary: #D4AF37;     /* Or (Détails fins) */
-  --bg-cream: #FDFBF9;      /* Fond presque blanc, très lumineux */
-  --text-dark: #554a55;     /* Gris-Violacé doux (moins dur que le noir) */
-  --soft-shadow: 0 20px 40px rgba(74, 44, 74, 0.03); /* Ombre ultra-légère */
+  --primary: #4A2C4A; /* Aubergine */
+  --secondary: #D4AF37; /* Or */
+  --bg-cream: #FDFBF9;
+  --text-dark: #554a55;
 }
 
 body {
   background-color: var(--bg-cream);
   color: var(--text-dark);
   font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 2.0; /* Lignes très espacées (Effet aéré) */
-  font-weight: 300;
+  margin: 0; padding: 0; line-height: 2.0; font-weight: 300;
 }
 
-/* --- TYPOGRAPHIE FLUIDE --- */
 h1, h2, h3, nav a { font-family: 'Playfair Display', serif; }
 
-h1 { font-size: 3.8em; color: var(--primary); margin-bottom: 0.2em; letter-spacing: 1px; font-weight: 400; }
-h2 { 
-  font-size: 2.8em; color: var(--primary); text-align: center; 
-  font-style: italic; margin-top: 100px; margin-bottom: 60px; font-weight: 400;
-}
-
-/* --- HEADER TRANSPARENT --- */
+/* --- HEADER & MENU --- */
 header {
-  background: transparent; /* On enlève le fond blanc dur */
-  padding: 30px 50px;
-  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px 50px; display: flex; justify-content: space-between; align-items: center;
+  background: white; border-bottom: 1px solid #f0f0f0;
 }
-.logo img { height: 80px; }
+.logo img { height: 70px; }
+
 nav a {
-  text-decoration: none; color: var(--primary); font-size: 1.1em;
-  font-style: italic; margin-left: 40px; position: relative;
+  text-decoration: none; color: var(--text-dark); font-size: 0.9em;
+  text-transform: uppercase; letter-spacing: 2px; margin: 0 20px; transition: 0.3s;
 }
-nav a::after { /* Petite ligne dorée qui apparait au survol */
-  content: ''; display: block; width: 0; height: 1px; background: var(--secondary); transition: width .3s;
-}
-nav a:hover::after { width: 100%; }
+nav a:hover { color: var(--primary); }
 
-/* --- HERO IMMERSIF --- */
-.hero {
-  height: 85vh; /* Très grand */
-  background-size: cover; background-position: center;
-  display: flex; align-items: center; justify-content: center; text-align: center;
-  position: relative; margin: 20px; border-radius: 30px; /* Image arrondie */
+.social-icons a {
+  color: var(--primary); font-size: 1.2em; margin-left: 15px; transition: 0.3s;
+}
+.social-icons a:hover { color: var(--secondary); }
+
+/* --- WIDGET CHAT --- */
+.chat-widget {
+  position: fixed; bottom: 30px; right: 30px; z-index: 9999;
+  display: flex; flex-direction: column; align-items: flex-end;
+}
+.chat-button {
+  background-color: var(--primary); color: white; width: 60px; height: 60px;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 25px; box-shadow: 0 5px 20px rgba(74, 44, 74, 0.3);
+  text-decoration: none; transition: transform 0.3s;
+}
+.chat-button:hover { transform: scale(1.1); background-color: var(--secondary); }
+
+.chat-message {
+  background: white; padding: 20px; border-radius: 20px 20px 0 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1); margin-bottom: 15px;
+  max-width: 250px; font-size: 0.9em; line-height: 1.4;
+  border: 1px solid #eee;
+  animation: popIn 0.5s ease-out;
+}
+@keyframes popIn { from {opacity: 0; transform: translateY(20px);} to {opacity: 1; transform: translateY(0);} }
+
+/* --- PAGE QUI SUIS-JE (ACCUEIL) --- */
+.hero-slider {
+  position: relative; width: 100%; height: 60vh; overflow: hidden; margin-bottom: 60px;
+}
+.hero-slide {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background-size: cover; background-position: center; opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+.hero-slide.active { opacity: 1; }
+
+.about-container { max-width: 900px; margin: 0 auto; padding: 0 20px 80px 20px; text-align: center; }
+.about-title { font-size: 3em; margin-bottom: 30px; color: var(--primary); font-style: italic; }
+.about-text { font-size: 1.1em; margin-bottom: 20px; text-align: justify; }
+
+/* Pour les autres pages */
+.container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+.cards-wrapper { display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; }
+.floating-card { background: white; width: 300px; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); text-align: center; }
+.price { font-family: 'Playfair Display', serif; font-size: 1.8em; color: var(--secondary); display: block; margin: 20px 0; }
+.btn-outline { display: inline-block; padding: 10px 30px; border: 1px solid #ccc; border-radius: 30px; text-decoration: none; color: #555; font-size: 0.8em; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+.btn-outline:hover { border-color: var(--primary); color: var(--primary); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  header { flex-direction: column; gap: 15px; }
+  nav a { display: block; margin: 10px 0; }
+  .about-text { text-align: left; }
+}
+/* --- LAYOUT ÉDITORIAL (2 COLONNES) --- */
+.split-screen {
+  display: flex;
+  min-height: 85vh; /* Prend presque toute la hauteur de l'écran */
+  background-color: var(--bg-cream);
+}
+
+/* Colonne GAUCHE (Texte) */
+.split-text {
+  flex: 1; /* Prend 50% */
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centre le texte verticalement */
+}
+
+/* Colonne DROITE (Images) */
+.split-image {
+  flex: 1; /* Prend 50% */
+  position: relative;
   overflow: hidden;
+  background-color: #ddd; /* Couleur de fond si l'image charge mal */
 }
-.hero::before { content: ""; position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(255,255,255,0.1); } /* Voile très léger */
-.hero-content { position: relative; z-index: 1; max-width: 900px; padding: 40px; background: rgba(255,255,255,0.85); border-radius: 50% 50% 0 0 / 30px; backdrop-filter: blur(5px); }
 
-/* --- BOUTONS ARRONDIS (PILL SHAPE) --- */
-.btn-action {
-  background-color: var(--primary); color: white; padding: 18px 45px;
-  text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 0.85em;
-  text-transform: uppercase; letter-spacing: 2px; border-radius: 50px; /* Forme Pilule */
-  display: inline-block; transition: all 0.4s; box-shadow: var(--soft-shadow);
-  border: 1px solid var(--primary); margin-top: 20px;
+/* Les images du slider */
+.slide-bg {
+  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+  background-size: cover; background-position: center;
+  opacity: 0; transition: opacity 2s ease-in-out; /* Transition très lente et douce */
+  transform: scale(1.05); /* Petit zoom pour effet luxe */
 }
-.btn-action:hover { background-color: white; color: var(--primary); transform: translateY(-3px); }
+.slide-bg.active { opacity: 1; transform: scale(1); transition: opacity 2s ease-in-out, transform 8s linear; }
 
-.btn-outline {
-  background: transparent; color: var(--text-dark); padding: 12px 35px;
-  border: 1px solid #ddd; border-radius: 50px; text-decoration: none;
-  font-size: 0.8em; letter-spacing: 2px; text-transform: uppercase; display: block; margin: 30px auto 0; width: fit-content; transition: 0.3s;
+/* Typographie Spécifique */
+.editorial-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5em;
+  color: var(--primary);
+  line-height: 1.1;
+  margin-bottom: 30px;
+  font-style: italic;
 }
-.btn-outline:hover { border-color: var(--secondary); color: var(--secondary); }
 
-/* --- STRUCTURE FLOTTANTE --- */
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-
-/* Bio style "Zig Zag" aéré */
-.bio-section {
-  display: flex; gap: 80px; align-items: center; justify-content: center;
-  margin: 100px 0; padding: 0 40px;
+.editorial-content {
+  font-size: 1.05em;
+  color: var(--text-dark);
+  line-height: 1.9;
+  text-align: justify;
 }
-.bio-img img { 
-  width: 400px; height: 500px; object-fit: cover; 
-  border-radius: 200px 200px 20px 20px; /* Forme "Arche" très tendance */
-  box-shadow: var(--soft-shadow);
-}
-.bio-text { max-width: 500px; font-size: 1.1em; }
 
-/* --- CARTES AÉRIENNES (Sans bordures) --- */
-.cards-wrapper { display: flex; flex-wrap: wrap; gap: 60px; justify-content: center; }
-
-.floating-card {
-  background: white; width: 320px; padding: 50px 30px;
-  border-radius: 30px; /* Coins très doux */
-  box-shadow: var(--soft-shadow); /* Ombre floue */
-  text-align: center; transition: transform 0.4s;
-}
-.floating-card:hover { transform: translateY(-10px); }
-.floating-card h3 { font-size: 1.8em; margin: 0 0 15px 0; color: var(--primary); font-weight: 400; }
-
-/* Liste formations épurée */
-.check-list { list-style: none; padding: 0; text-align: left; margin: 30px 0; color: #777; font-size: 0.9em; }
-.check-list li { margin-bottom: 15px; display: flex; align-items: center; gap: 15px; }
-.check-list li::before { content: "✨"; font-size: 0.8em; } /* Etoile au lieu de coche verte pour le côté magie/zen */
-
-.price { font-family: 'Playfair Display', serif; font-size: 2em; color: var(--secondary); display: block; margin-top: 20px; font-style: italic; }
-
-/* --- AVIS --- */
-.testimonials { margin-top: 150px; padding: 100px 20px; text-align: center; background: radial-gradient(circle, #f3edf3 0%, #FDFBF9 70%); }
-.avatar-wrapper { width: 80px; height: 80px; background: white; border-radius: 50%; margin: 0 auto 30px; display: flex; align-items: center; justify-content: center; font-size: 35px; box-shadow: var(--soft-shadow); }
-.stars { color: var(--secondary); letter-spacing: 8px; margin-bottom: 20px; display: block; }
-.quote { font-size: 1.4em; color: var(--primary); font-style: italic; line-height: 1.6; max-width: 700px; margin: 0 auto 30px; }
-
-/* RESPONSIVE */
+/* RESPONSIVE (Sur mobile, on empile) */
 @media (max-width: 900px) {
-  .bio-section { flex-direction: column; text-align: center; }
-  .bio-img img { width: 100%; height: auto; border-radius: 20px; }
-  .hero-content { margin: 0 20px; border-radius: 20px; }
+  .split-screen { flex-direction: column-reverse; } /* Image en haut, texte en bas */
+  .split-text { padding: 40px 20px; }
+  .split-image { height: 400px; min-height: 400px; }
+  .editorial-title { font-size: 2.5em; }
 }
