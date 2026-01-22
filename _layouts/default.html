@@ -5,23 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{ page.title }} | {{ site.title }}</title>
   
-  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Helvetica+Neue:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
- <header>
+  <header>
     <div class="logo">
-      <a href="/">
+      <a href="{{ '/' | relative_url }}">
         <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Energie de l'Aum">
       </a>
     </div>
     <nav>
-      <a href="{{ '/' | relative_url }}">Accueil</a>
-      <a href="{{ '/soins.html' | relative_url }}">Soins</a>
-      <a href="#tarifs">Réserver</a>
-      <a href="mailto:votre-email@gmail.com">Contact</a>
+      <a href="{{ '/' | relative_url }}">ACCUEIL</a>
+      <a href="{{ '/soins.html' | relative_url }}">SOINS</a>
+      <a href="#tarifs">RÉSERVER</a>
+      <a href="mailto:votre-email@gmail.com">CONTACT</a>
     </nav>
   </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer style="text-align: center; padding: 40px 20px; font-size: 0.8em; color: #777; border-top: 1px solid #eaeaea; margin-top: 50px;">
+    <p>&copy; 2026 Energie de l'Aum. Tous droits réservés.</p>
+    <p>Agde & Bassin de Thau</p>
+  </footer>
 
 </body>
 </html>
