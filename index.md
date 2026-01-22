@@ -95,25 +95,35 @@ description: Cabinet de soins énergétiques Energie de l'Aum à Marseillan. Mé
   <div class="carousel-container">
     
     <div class="carousel-slide active">
-      <div class="avatar-wrapper avatar-femme"></div> <div class="google-badge">G Avis Google</div>
+      <div class="avatar-wrapper avatar-femme"></div>
+      <div class="google-badge">G Avis Google</div>
       <div class="stars">★★★★★</div>
-      <p class="quote">"Une expérience incroyable. Mélanie est d'une douceur absolue. Le soin m'a fait un bien fou, je recommande les yeux fermés !"</p>
-      <p><strong>— Sophie Martin</strong></p>
-    </div>
-
-    <div class="carousel-slide">
-      <div class="avatar-wrapper avatar-homme"></div> <div class="google-badge">G Avis Google</div>
-      <div class="stars">★★★★★</div>
-      <p class="quote">"J'ai suivi la formation Reiki niveau 1. Le support est très clair et l'approche de Mélanie est très professionnelle."</p>
-      <p><strong>— Jean Dupont</strong></p>
+      <p class="quote">"Très belle expérience avec Énergie de l’Aum. Le soin Reiki apporte un profond apaisement et un réel rééquilibrage énergétique. Accueil bienveillant, écoute et grand professionnalisme. Je recommande vivement."</p>
+      <p><strong>— Cousin Stéphanie</strong></p>
     </div>
 
     <div class="carousel-slide">
       <div class="avatar-wrapper avatar-femme"></div>
       <div class="google-badge">G Avis Google</div>
       <div class="stars">★★★★★</div>
-      <p class="quote">"Soin à distance très puissant. J'étais sceptique mais j'ai ressenti beaucoup de chaleur. Un vrai moment de déconnexion."</p>
-      <p><strong>— Camille L.</strong></p>
+      <p class="quote">"J’ai vécu un soin Reiki absolument exceptionnel. Dès les premières minutes, je me suis sentie détendue, apaisée et pleinement en confiance. L’énergie transmise était douce mais très puissante... Merci pour ce merveilleux moment de soin et d’harmonie."</p>
+      <p><strong>— Patricia Murino</strong></p>
+    </div>
+
+    <div class="carousel-slide">
+      <div class="avatar-wrapper avatar-femme"></div>
+      <div class="google-badge">G Avis Google</div>
+      <div class="stars">★★★★★</div>
+      <p class="quote">"Séance de Lahoshi aujourd’hui dispensée par Mel, une découverte pour moi... Un pur moment de bonheur avec une personne généreuse et bienveillante qui vous aide à lâcher prise et à évacuer les tensions."</p>
+      <p><strong>— Edwige Terrade</strong></p>
+    </div>
+
+    <div class="carousel-slide">
+      <div class="avatar-wrapper avatar-homme"></div>
+      <div class="google-badge">G Avis Google</div>
+      <div class="stars">★★★★★</div>
+      <p class="quote">"Je recommande vivement ! Grâce à Mél j'ai pu à chaque fois me sentir mieux et me recentrer. Je suis ressorti de cette séance relâché, détendu et zen. Un moment de pure relaxation qui ressource."</p>
+      <p><strong>— Gauthier Mogliacci</strong></p>
     </div>
 
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -139,6 +149,6 @@ document.addEventListener("DOMContentLoaded", function() {
     slides[slideIndex-1].style.display = "block";  
     slides[slideIndex-1].classList.add("active");
   }
-  setInterval(function() { plusSlides(1); }, 7000); // 7 secondes pour lire tranquillement
+  setInterval(function() { plusSlides(1); }, 8000); // Change toutes les 8 secondes (texte long)
 });
 </script>
