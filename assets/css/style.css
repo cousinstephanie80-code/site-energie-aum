@@ -1,144 +1,149 @@
+/* --- CSS COMPLET ET DÉFINITIF : LUXE, ZEN & CONTRASTE --- */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 
 :root {
-  --primary: #4A2C4A; /* Aubergine */
-  --secondary: #D4AF37; /* Or */
-  --bg-cream: #FDFBF9;
-  --text-dark: #554a55;
+  --primary: #4A2C4A;       /* Aubergine profond (Identité Luxe) */
+  --secondary: #D4AF37;     /* Or riche (Détails) */
+  --bg-cream: #FDFBF9;      /* Fond clair principal */
+  --bg-aubergine-light: #F4EFF4; /* Fond Aubergine très pâle (Section LaHoChi) */
+  --text-dark: #554a55;     /* Gris chaud */
+  --soft-shadow: 0 20px 40px rgba(74, 44, 74, 0.05); /* Ombre douce */
 }
 
 body {
   background-color: var(--bg-cream);
   color: var(--text-dark);
   font-family: 'Montserrat', sans-serif;
-  margin: 0; padding: 0; line-height: 2.0; font-weight: 300;
+  margin: 0; padding: 0;
+  line-height: 2.0;
+  font-weight: 300;
 }
 
+/* --- TYPOGRAPHIE --- */
 h1, h2, h3, nav a { font-family: 'Playfair Display', serif; }
+
+h1 { font-size: 3.5em; color: var(--primary); margin-bottom: 0.2em; font-weight: 400; text-align: center; }
+h2 { font-size: 2.8em; color: var(--primary); text-align: center; font-style: italic; margin-top: 60px; margin-bottom: 40px; font-weight: 400; }
 
 /* --- HEADER & MENU --- */
 header {
-  padding: 20px 50px; display: flex; justify-content: space-between; align-items: center;
-  background: white; border-bottom: 1px solid #f0f0f0;
+  background: white;
+  padding: 15px 40px;
+  display: flex; justify-content: space-between; align-items: center;
+  position: sticky; top: 0; z-index: 1000;
+  border-bottom: 1px solid rgba(74, 44, 74, 0.05);
 }
-.logo img { height: 70px; }
+
+.logo img { height: 75px; }
 
 nav a {
   text-decoration: none; color: var(--text-dark); font-size: 0.9em;
-  text-transform: uppercase; letter-spacing: 2px; margin: 0 20px; transition: 0.3s;
+  text-transform: uppercase; letter-spacing: 2px; margin-left: 30px; transition: 0.3s;
 }
 nav a:hover { color: var(--primary); }
 
-.social-icons a {
-  color: var(--primary); font-size: 1.2em; margin-left: 15px; transition: 0.3s;
-}
+.social-icons a { color: var(--primary); font-size: 1.2em; margin-left: 15px; transition: 0.3s; }
 .social-icons a:hover { color: var(--secondary); }
 
-/* --- WIDGET CHAT --- */
-.chat-widget {
-  position: fixed; bottom: 30px; right: 30px; z-index: 9999;
-  display: flex; flex-direction: column; align-items: flex-end;
-}
-.chat-button {
-  background-color: var(--primary); color: white; width: 60px; height: 60px;
-  border-radius: 50%; display: flex; align-items: center; justify-content: center;
-  font-size: 25px; box-shadow: 0 5px 20px rgba(74, 44, 74, 0.3);
-  text-decoration: none; transition: transform 0.3s;
-}
-.chat-button:hover { transform: scale(1.1); background-color: var(--secondary); }
-
-.chat-message {
-  background: white; padding: 20px; border-radius: 20px 20px 0 20px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1); margin-bottom: 15px;
-  max-width: 250px; font-size: 0.9em; line-height: 1.4;
-  border: 1px solid #eee;
-  animation: popIn 0.5s ease-out;
-}
-@keyframes popIn { from {opacity: 0; transform: translateY(20px);} to {opacity: 1; transform: translateY(0);} }
-
-/* --- PAGE QUI SUIS-JE (ACCUEIL) --- */
-.hero-slider {
-  position: relative; width: 100%; height: 60vh; overflow: hidden; margin-bottom: 60px;
-}
-.hero-slide {
-  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-  background-size: cover; background-position: center; opacity: 0;
-  transition: opacity 1.5s ease-in-out;
-}
-.hero-slide.active { opacity: 1; }
-
-.about-container { max-width: 900px; margin: 0 auto; padding: 0 20px 80px 20px; text-align: center; }
-.about-title { font-size: 3em; margin-bottom: 30px; color: var(--primary); font-style: italic; }
-.about-text { font-size: 1.1em; margin-bottom: 20px; text-align: justify; }
-
-/* Pour les autres pages */
-.container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
-.cards-wrapper { display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; }
-.floating-card { background: white; width: 300px; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); text-align: center; }
-.price { font-family: 'Playfair Display', serif; font-size: 1.8em; color: var(--secondary); display: block; margin: 20px 0; }
-.btn-outline { display: inline-block; padding: 10px 30px; border: 1px solid #ccc; border-radius: 30px; text-decoration: none; color: #555; font-size: 0.8em; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
-.btn-outline:hover { border-color: var(--primary); color: var(--primary); }
-
-/* Responsive */
-@media (max-width: 768px) {
-  header { flex-direction: column; gap: 15px; }
-  nav a { display: block; margin: 10px 0; }
-  .about-text { text-align: left; }
-}
-/* --- LAYOUT ÉDITORIAL (2 COLONNES) --- */
-.split-screen {
-  display: flex;
-  min-height: 85vh; /* Prend presque toute la hauteur de l'écran */
-  background-color: var(--bg-cream);
+/* --- SECTIONS COLORÉES (Pour la page Soins) --- */
+.section-cream { background-color: var(--bg-cream); padding: 80px 20px; }
+.section-aubergine { 
+    background-color: var(--bg-aubergine-light); 
+    padding: 80px 20px; 
+    border-top: 1px solid rgba(74, 44, 74, 0.05);
+    border-bottom: 1px solid rgba(74, 44, 74, 0.05);
 }
 
-/* Colonne GAUCHE (Texte) */
-.split-text {
-  flex: 1; /* Prend 50% */
-  padding: 60px 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centre le texte verticalement */
+/* --- BANNIÈRE HERO (Page Formations & Autres) --- */
+.hero {
+  height: 60vh;
+  background-size: cover; background-position: center;
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  position: relative; margin: 20px; border-radius: 30px; overflow: hidden;
 }
+.hero::before { content: ""; position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(255,255,255,0.15); }
+.hero-content { position: relative; z-index: 1; max-width: 900px; padding: 40px; background: rgba(255,255,255,0.9); border-radius: 20px; backdrop-filter: blur(5px); }
 
-/* Colonne DROITE (Images) */
-.split-image {
-  flex: 1; /* Prend 50% */
-  position: relative;
-  overflow: hidden;
-  background-color: #ddd; /* Couleur de fond si l'image charge mal */
-}
-
-/* Les images du slider */
+/* --- PAGE D'ACCUEIL (SPLIT SCREEN - A PROPOS) --- */
+.split-screen { display: flex; min-height: 85vh; background-color: var(--bg-cream); }
+.split-text { flex: 1; padding: 60px 80px; display: flex; flex-direction: column; justify-content: center; }
+.split-image { flex: 1; position: relative; overflow: hidden; background-color: #ddd; }
 .slide-bg {
   position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-  background-size: cover; background-position: center;
-  opacity: 0; transition: opacity 2s ease-in-out; /* Transition très lente et douce */
-  transform: scale(1.05); /* Petit zoom pour effet luxe */
+  background-size: cover; background-position: center; opacity: 0;
+  transition: opacity 2s ease-in-out; transform: scale(1.05);
 }
 .slide-bg.active { opacity: 1; transform: scale(1); transition: opacity 2s ease-in-out, transform 8s linear; }
+.editorial-title { font-size: 3.5em; color: var(--primary); line-height: 1.1; margin-bottom: 30px; font-style: italic; text-align: left; }
+.editorial-content { font-size: 1.05em; color: var(--text-dark); line-height: 1.9; text-align: justify; }
 
-/* Typographie Spécifique */
-.editorial-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 3.5em;
-  color: var(--primary);
-  line-height: 1.1;
-  margin-bottom: 30px;
-  font-style: italic;
+/* --- BIO & PRÉSENTATION (ZIG ZAG) --- */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.bio-section { display: flex; gap: 60px; align-items: center; justify-content: center; margin: 40px 0; }
+.bio-img img { object-fit: cover; box-shadow: var(--soft-shadow); }
+.bio-text { flex: 1; max-width: 600px; }
+
+/* --- CARTES LUXE (NOUVEAU DESIGN SANS PUCES) --- */
+.cards-wrapper { display: flex; flex-wrap: wrap; gap: 50px; justify-content: center; }
+
+.floating-card {
+  background: white; width: 320px; padding: 50px 35px;
+  border-radius: 25px; box-shadow: var(--soft-shadow);
+  text-align: center; transition: transform 0.4s, box-shadow 0.4s;
+  border: 1px solid rgba(212, 175, 55, 0.3); position: relative; overflow: hidden;
 }
+.floating-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(74, 44, 74, 0.1); border-color: var(--secondary); }
+.floating-card h3 { font-size: 1.8em; margin: 0 0 10px 0; color: var(--primary); font-weight: 400; }
+.card-location { font-style: italic; color: #888; margin-bottom: 30px; font-family: 'Playfair Display', serif; }
+.card-details { margin-bottom: 30px; color: var(--text-dark); font-size: 0.95em; line-height: 2.2; }
+.detail-separator { color: var(--secondary); margin: 0 10px; font-size: 0.8em; position: relative; top: -2px; }
+.price { font-family: 'Playfair Display', serif; font-size: 2.2em; color: var(--secondary); display: block; margin: 30px 0; font-style: italic; font-weight: 600; }
 
-.editorial-content {
-  font-size: 1.05em;
-  color: var(--text-dark);
-  line-height: 1.9;
-  text-align: justify;
+/* BOUTONS */
+.btn-card { /* Bouton Aubergine Plein */
+    background-color: var(--primary); color: white; padding: 15px 35px;
+    text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 0.85em;
+    text-transform: uppercase; letter-spacing: 2px; border-radius: 50px;
+    display: inline-block; transition: all 0.3s; box-shadow: 0 10px 20px rgba(74, 44, 74, 0.2); border: none;
 }
+.btn-card:hover { background-color: var(--secondary); transform: translateY(-3px); box-shadow: 0 15px 30px rgba(212, 175, 55, 0.3); }
 
-/* RESPONSIVE (Sur mobile, on empile) */
+.btn-outline { /* Bouton transparent (Formations) */
+    background: transparent; color: var(--text-dark); padding: 12px 35px;
+    border: 1px solid #ddd; border-radius: 50px; text-decoration: none;
+    font-size: 0.8em; letter-spacing: 2px; text-transform: uppercase;
+    display: inline-block; transition: 0.3s;
+}
+.btn-outline:hover { border-color: var(--secondary); color: var(--secondary); }
+
+/* --- AVIS & CARROUSEL --- */
+.testimonials { margin-top: 100px; padding: 80px 20px; text-align: center; background: radial-gradient(circle, #fcfcfc 0%, #FDFBF9 70%); }
+.carousel-container { max-width: 800px; margin: 0 auto; position: relative; }
+.carousel-slide { display: none; padding: 20px; animation: fade 1s; }
+.carousel-slide.active { display: block; }
+.avatar-wrapper { width: 80px; height: 80px; background: white; border-radius: 50%; margin: 0 auto 30px; display: flex; align-items: center; justify-content: center; font-size: 35px; box-shadow: var(--soft-shadow); }
+.stars { color: var(--secondary); letter-spacing: 8px; margin-bottom: 20px; display: block; }
+.quote { font-size: 1.3em; color: var(--primary); font-style: italic; line-height: 1.6; max-width: 700px; margin: 0 auto 30px; }
+.avatar-homme::before { content: "👨🏻"; } .avatar-femme::before { content: "👩🏻"; }
+.prev, .next { color: var(--secondary); cursor: pointer; position: absolute; top: 50%; padding: 10px; font-size: 30px; opacity: 0.7; }
+.next { right: -40px; } .prev { left: -40px; }
+
+/* CHAT WIDGET */
+.chat-widget { position: fixed; bottom: 30px; right: 30px; z-index: 9999; display: flex; flex-direction: column; align-items: flex-end; }
+.chat-button { background-color: var(--primary); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 25px; box-shadow: 0 5px 20px rgba(74, 44, 74, 0.3); text-decoration: none; transition: transform 0.3s; }
+.chat-button:hover { transform: scale(1.1); background-color: var(--secondary); }
+.chat-message { background: white; padding: 20px; border-radius: 20px 20px 0 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); margin-bottom: 15px; max-width: 250px; font-size: 0.9em; line-height: 1.4; border: 1px solid #eee; }
+
+/* RESPONSIVE */
 @media (max-width: 900px) {
-  .split-screen { flex-direction: column-reverse; } /* Image en haut, texte en bas */
-  .split-text { padding: 40px 20px; }
+  .split-screen { flex-direction: column-reverse; }
   .split-image { height: 400px; min-height: 400px; }
-  .editorial-title { font-size: 2.5em; }
+  .split-text { padding: 40px 20px; }
+  .bio-section { flex-direction: column !important; text-align: center; } /* Le !important force l'empilement sur mobile */
+  .bio-img img { width: 100%; height: auto; border-radius: 20px; }
+  header { flex-direction: column; gap: 15px; }
+  nav a { display: block; margin: 10px 0; }
+  .prev { left: 0; } .next { right: 0; }
 }
+
+@keyframes fade { from {opacity: 0} to {opacity: 1} }
