@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Energie de l'Aum | Soins Reiki & LaHoChi à Agde
-description: Cabinet de soins énergétiques Energie de l'Aum à Agde. Mélanie vous propose des séances de Reiki et LaHoChi en présentiel ou à distance pour apaiser votre mental.
+title: Energie de l'Aum | Soins Reiki & LaHoChi à Marseillan
+description: Cabinet de soins énergétiques Energie de l'Aum à Marseillan. Mélanie vous propose des séances de Reiki et LaHoChi en présentiel ou à distance pour apaiser votre mental.
 ---
 
 <div class="hero" style="background-image: url('assets/images/banniere-accueil.jpg');">
@@ -11,7 +11,7 @@ description: Cabinet de soins énergétiques Energie de l'Aum à Agde. Mélanie 
     <h2 style="font-size: 1.5em; color: #f0f0f0; margin-top: 0; font-weight: 300;">Soins Énergétiques Reiki, LaHoChi & Merkabah</h2>
     
     <div style="margin-top: 30px;">
-      <span style="display: inline-block; background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; color: white; border: 1px solid white; margin: 5px;">📍 Agde & Bassin de Thau</span>
+      <span style="display: inline-block; background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; color: white; border: 1px solid white; margin: 5px;">📍Marseillan, Maraussan & Bassin de Thau</span>
       <span style="display: inline-block; background: rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px; color: white; border: 1px solid white; margin: 5px;">🌍 Soins à Distance</span>
     </div>
 
@@ -29,7 +29,7 @@ description: Cabinet de soins énergétiques Energie de l'Aum à Agde. Mélanie 
       <h2 style="text-align: left; margin-top: 0;">Bienvenue chez <span style="color: #8E6BC7;">Energie de l'Aum</span></h2>
       <p style="font-size: 1.1em;">Bonjour, je suis <strong>Mélanie</strong>, praticienne et formatrice certifiée.</p>
       <p>Mon cabinet, <strong>Energie de l'Aum</strong>, est né d'une volonté simple : vous offrir un espace sacré pour déposer vos charges mentales et émotionnelles.</p>
-      <p>Que vous soyez à Agde ou à l'autre bout de la France, je vous accompagne avec le Reiki et le LaHoChi pour rééquilibrer vos énergies vitales.</p>
+      <p>Que vous soyez à Marseillan ou à l'autre bout de la France, je vous accompagne avec le Reiki et le LaHoChi pour rééquilibrer vos énergies vitales.</p>
     </div>
   </div>
 
@@ -40,7 +40,7 @@ description: Cabinet de soins énergétiques Energie de l'Aum à Agde. Mélanie 
     
     <div style="flex: 1; min-width: 300px; background: white; padding: 30px; border-radius: 10px; border-top: 5px solid #8E6BC7; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
       <h3 style="color: #8E6BC7;">📍 En Cabinet (Présentiel)</h3>
-      <p><strong>Lieu :</strong> Agde / Bassin de Thau</p>
+      <p><strong>Lieu :</strong> Marseillan /Maraussan / Bassin de Thau</p>
       <p>Un moment privilégié dans un cadre serein. Le contact direct favorise un lâcher-prise immédiat et profond.</p>
       <ul style="text-align: left; color: #555; margin-bottom: 20px;">
         <li>Soin Reiki ou LaHoChi</li>
