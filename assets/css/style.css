@@ -1,196 +1,120 @@
-/* --- AMBIANCE LUXE & ÉLÉGANCE (AUBERGINE DOMINANT) --- */
-
-/* Importation : Playfair (Titres/Menu) & Montserrat (Lecture) */
+/* --- AMBIANCE ZEN, AÉRÉE & ORGANIQUE --- */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 
 :root {
-  --primary: #4A2C4A;       /* Aubergine Profond (Dominant) */
-  --secondary: #D4AF37;     /* Or (Détails & Prix) */
-  --bg-cream: #F9F9F9;      /* Fond très clair et pur */
-  --white: #FFFFFF;
-  --text-dark: #4A4A4A;     /* Gris foncé doux */
+  --primary: #4A2C4A;       /* Aubergine (Votre identité) */
+  --secondary: #D4AF37;     /* Or (Détails fins) */
+  --bg-cream: #FDFBF9;      /* Fond presque blanc, très lumineux */
+  --text-dark: #554a55;     /* Gris-Violacé doux (moins dur que le noir) */
+  --soft-shadow: 0 20px 40px rgba(74, 44, 74, 0.03); /* Ombre ultra-légère */
 }
 
 body {
   background-color: var(--bg-cream);
   color: var(--text-dark);
-  font-family: 'Montserrat', sans-serif; /* Texte courant propre */
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
+  line-height: 2.0; /* Lignes très espacées (Effet aéré) */
   font-weight: 300;
 }
 
-/* --- TYPOGRAPHIE "SCRIPT" & ÉLÉGANTE --- */
-h1, h2, h3, nav a {
-  font-family: 'Playfair Display', serif; /* La police "Style 5 étoiles" */
-}
+/* --- TYPOGRAPHIE FLUIDE --- */
+h1, h2, h3, nav a { font-family: 'Playfair Display', serif; }
 
-h1 { font-size: 3.5em; color: var(--primary); margin-bottom: 0.2em; text-transform: uppercase; letter-spacing: 2px; }
-
-/* Les titres H2 avec le style italique élégant */
+h1 { font-size: 3.8em; color: var(--primary); margin-bottom: 0.2em; letter-spacing: 1px; font-weight: 400; }
 h2 { 
-  font-size: 2.5em; 
-  color: var(--primary); 
-  text-align: center; 
-  font-style: italic; /* La touche "Manuscrit" */
-  margin-top: 60px; 
-  margin-bottom: 40px; 
-  font-weight: 400;
+  font-size: 2.8em; color: var(--primary); text-align: center; 
+  font-style: italic; margin-top: 100px; margin-bottom: 60px; font-weight: 400;
 }
 
-/* --- HEADER & MENU --- */
+/* --- HEADER TRANSPARENT --- */
 header {
-  background: var(--white);
-  padding: 20px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  background: transparent; /* On enlève le fond blanc dur */
+  padding: 30px 50px;
+  display: flex; justify-content: space-between; align-items: center;
 }
-
-.logo img { height: 75px; }
-
+.logo img { height: 80px; }
 nav a {
-  text-decoration: none;
-  color: var(--text-dark);
-  font-size: 1.1em;
-  font-style: italic; /* L'effet "Script" demandé */
-  margin-left: 35px;
-  transition: 0.3s;
-  text-transform: capitalize; /* Pas de tout majuscule, plus doux */
+  text-decoration: none; color: var(--primary); font-size: 1.1em;
+  font-style: italic; margin-left: 40px; position: relative;
 }
+nav a::after { /* Petite ligne dorée qui apparait au survol */
+  content: ''; display: block; width: 0; height: 1px; background: var(--secondary); transition: width .3s;
+}
+nav a:hover::after { width: 100%; }
 
-nav a:hover { color: var(--primary); text-decoration: underline; }
-
-/* --- BANNIÈRE HERO --- */
+/* --- HERO IMMERSIF --- */
 .hero {
-  height: 70vh;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: relative;
+  height: 85vh; /* Très grand */
+  background-size: cover; background-position: center;
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  position: relative; margin: 20px; border-radius: 30px; /* Image arrondie */
+  overflow: hidden;
 }
+.hero::before { content: ""; position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(255,255,255,0.1); } /* Voile très léger */
+.hero-content { position: relative; z-index: 1; max-width: 900px; padding: 40px; background: rgba(255,255,255,0.85); border-radius: 50% 50% 0 0 / 30px; backdrop-filter: blur(5px); }
 
-.hero::before {
-  content: "";
-  position: absolute; top:0; left:0; right:0; bottom:0;
-  background: rgba(74, 44, 74, 0.3); /* Voile Aubergine léger */
-}
-
-.hero-content { position: relative; z-index: 1; max-width: 900px; }
-.hero h1 { color: white; text-shadow: 0 4px 15px rgba(0,0,0,0.5); font-style: normal; }
-.hero h2 { color: #f0f0f0; font-family: 'Montserrat', sans-serif; font-style: normal; text-transform: uppercase; font-size: 1.2em; letter-spacing: 3px; margin-top: 10px; }
-
-/* --- BOUTONS AUBERGINE --- */
+/* --- BOUTONS ARRONDIS (PILL SHAPE) --- */
 .btn-action {
-  background-color: var(--primary); /* Bouton Aubergine */
-  color: white;
-  padding: 15px 35px;
-  text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.9em;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border-radius: 2px; /* Coins carrés chics */
-  display: inline-block;
-  transition: all 0.3s;
-  margin-top: 20px;
-  border: 1px solid var(--primary);
+  background-color: var(--primary); color: white; padding: 18px 45px;
+  text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 0.85em;
+  text-transform: uppercase; letter-spacing: 2px; border-radius: 50px; /* Forme Pilule */
+  display: inline-block; transition: all 0.4s; box-shadow: var(--soft-shadow);
+  border: 1px solid var(--primary); margin-top: 20px;
 }
+.btn-action:hover { background-color: white; color: var(--primary); transform: translateY(-3px); }
 
-.btn-action:hover {
-  background-color: transparent;
-  color: var(--primary); /* Devient blanc/transparent au survol */
-  border: 1px solid var(--primary);
-}
-
-/* Bouton Spécial Formations (Contour uniquement) */
 .btn-outline {
-  background-color: transparent;
-  color: var(--text-dark);
-  padding: 12px 30px;
-  border: 1px solid #ccc;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 0.8em;
-  letter-spacing: 2px;
-  transition: 0.3s;
-  display: block;
-  margin: 20px auto 0;
-  width: fit-content;
+  background: transparent; color: var(--text-dark); padding: 12px 35px;
+  border: 1px solid #ddd; border-radius: 50px; text-decoration: none;
+  font-size: 0.8em; letter-spacing: 2px; text-transform: uppercase; display: block; margin: 30px auto 0; width: fit-content; transition: 0.3s;
 }
-.btn-outline:hover { border-color: var(--primary); color: var(--primary); }
+.btn-outline:hover { border-color: var(--secondary); color: var(--secondary); }
 
-/* --- SECTIONS --- */
-.container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
+/* --- STRUCTURE FLOTTANTE --- */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
+/* Bio style "Zig Zag" aéré */
 .bio-section {
-  display: flex; gap: 50px; align-items: center;
-  background: white; padding: 50px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+  display: flex; gap: 80px; align-items: center; justify-content: center;
+  margin: 100px 0; padding: 0 40px;
 }
-.bio-img img { width: 300px; height: 300px; object-fit: cover; border-radius: 50%; }
-
-/* --- CARTES FORMATIONS (Style Épuré Checkmarks) --- */
-.formations-grid {
-  display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;
+.bio-img img { 
+  width: 400px; height: 500px; object-fit: cover; 
+  border-radius: 200px 200px 20px 20px; /* Forme "Arche" très tendance */
+  box-shadow: var(--soft-shadow);
 }
+.bio-text { max-width: 500px; font-size: 1.1em; }
 
-.formation-card {
-  background: white;
-  width: 350px;
-  padding: 40px 30px;
-  border-radius: 5px; /* Carte simple */
-  box-shadow: 0 5px 20px rgba(0,0,0,0.02); /* Ombre très légère */
-  text-align: center;
-  border: 1px solid #f0f0f0;
-  transition: transform 0.3s;
+/* --- CARTES AÉRIENNES (Sans bordures) --- */
+.cards-wrapper { display: flex; flex-wrap: wrap; gap: 60px; justify-content: center; }
+
+.floating-card {
+  background: white; width: 320px; padding: 50px 30px;
+  border-radius: 30px; /* Coins très doux */
+  box-shadow: var(--soft-shadow); /* Ombre floue */
+  text-align: center; transition: transform 0.4s;
 }
+.floating-card:hover { transform: translateY(-10px); }
+.floating-card h3 { font-size: 1.8em; margin: 0 0 15px 0; color: var(--primary); font-weight: 400; }
 
-.formation-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+/* Liste formations épurée */
+.check-list { list-style: none; padding: 0; text-align: left; margin: 30px 0; color: #777; font-size: 0.9em; }
+.check-list li { margin-bottom: 15px; display: flex; align-items: center; gap: 15px; }
+.check-list li::before { content: "✨"; font-size: 0.8em; } /* Etoile au lieu de coche verte pour le côté magie/zen */
 
-.formation-card h3 { 
-  font-size: 1.8em; color: var(--text-dark); margin: 0 0 10px 0; font-style: normal;
+.price { font-family: 'Playfair Display', serif; font-size: 2em; color: var(--secondary); display: block; margin-top: 20px; font-style: italic; }
+
+/* --- AVIS --- */
+.testimonials { margin-top: 150px; padding: 100px 20px; text-align: center; background: radial-gradient(circle, #f3edf3 0%, #FDFBF9 70%); }
+.avatar-wrapper { width: 80px; height: 80px; background: white; border-radius: 50%; margin: 0 auto 30px; display: flex; align-items: center; justify-content: center; font-size: 35px; box-shadow: var(--soft-shadow); }
+.stars { color: var(--secondary); letter-spacing: 8px; margin-bottom: 20px; display: block; }
+.quote { font-size: 1.4em; color: var(--primary); font-style: italic; line-height: 1.6; max-width: 700px; margin: 0 auto 30px; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .bio-section { flex-direction: column; text-align: center; }
+  .bio-img img { width: 100%; height: auto; border-radius: 20px; }
+  .hero-content { margin: 0 20px; border-radius: 20px; }
 }
-
-.formation-desc { color: #666; margin-bottom: 25px; font-style: italic; font-family: 'Playfair Display', serif; }
-
-/* Liste avec coches vertes */
-.check-list {
-  list-style: none; padding: 0; text-align: left; margin: 20px 0;
-  font-size: 0.95em; color: #555;
-}
-.check-list li { margin-bottom: 10px; display: flex; align-items: center; gap: 10px; }
-.check-list li::before { content: "✅"; color: #4CAF50; font-size: 1.1em; } /* La fameuse coche verte */
-
-.price {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8em; color: var(--secondary); /* Prix en Or */
-  margin: 20px 0 5px 0; display: block; font-style: italic;
-}
-
-.payment-note {
-  color: var(--primary); /* Aubergine */
-  font-weight: 500; font-size: 0.85em; margin-bottom: 25px; display: block;
-}
-
-/* --- AVIS (Toujours Aubergine) --- */
-.testimonials { background: var(--primary); color: white; padding: 60px 20px; text-align: center; margin-top: 80px; }
-.testimonials h2 { color: white; }
-.stars { color: var(--secondary); font-size: 1.5em; letter-spacing: 5px; }
-.carousel-container { max-width: 800px; margin: 0 auto; position: relative; }
-.carousel-slide { display: none; padding: 20px; animation: fade 1s; }
-.carousel-slide.active { display: block; }
-.avatar-wrapper { width: 70px; height: 70px; background: white; border-radius: 50%; margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; font-size: 30px; color: #333; }
-.avatar-homme::before { content: "👨🏻"; } .avatar-femme::before { content: "👩🏻"; }
-.prev, .next { color: white; cursor: pointer; position: absolute; top: 50%; padding: 10px; font-size: 20px; opacity: 0.7; }
-.next { right: 0; } .prev { left: 0; }
-
-@keyframes fade { from {opacity: 0} to {opacity: 1} }
