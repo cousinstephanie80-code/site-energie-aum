@@ -2,8 +2,8 @@ title: Energie de l'Aum
 description: >-
   Soins énergétiques Reiki, LaHoChi et Merkabah à Agde et Bassin de Thau.
   Mélanie vous accompagne pour apaiser le mental et rééquilibrer vos énergies.
-baseurl: ""
-url: "https://energiedelaum.fr"
+baseurl: "/site-energie-aum"
+# url: "https://energiedelaum.fr"
 twitter_username: energiedelaum
 github_username:  energiedelaum
 markdown: kramdown
