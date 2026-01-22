@@ -3,87 +3,106 @@ layout: default
 title: Soins Énergétiques | Energie de l'Aum
 ---
 
-<div style="text-align: center; padding: 60px 20px;">
-  <h1 style="margin-bottom: 10px; color: #4A2C4A;">Vos Espaces de Soin</h1>
-  <p style="margin-bottom: 40px; color: #666; font-style: italic; font-family: 'Playfair Display', serif; font-size: 1.2em;">Une parenthèse hors du temps pour renouer avec votre essence.</p>
+<div style="text-align: center; padding: 80px 20px; background: white;">
+  <h1 style="margin-bottom: 10px;">L'Art du Soin</h1>
+  <p style="margin-bottom: 0; color: #888; font-style: italic; font-family: 'Playfair Display', serif; font-size: 1.3em;">Trois vibrations. Trois chemins vers vous-même.</p>
 </div>
 
 <section class="section-cream">
   <div class="container">
-    
-    <div class="bio-section" style="margin: 0 0 60px 0; gap: 80px;">
+    <div class="bio-section" style="gap: 80px;">
       <div class="bio-text">
-        <h2 style="text-align: left; margin: 0 0 30px 0; font-size: 2.5em; color: #4A2C4A;">L'Art du Reiki</h2>
-        <p>Le Reiki est bien plus qu'un soin, c'est un retour à l'essentiel. Issue de la tradition japonaise, cette méthode naturelle consiste à canaliser l'énergie universelle pour la transmettre par apposition des mains.</p>
-        <p>Dans mon cabinet à <strong>Maraussan</strong>, je vous accueille dans un cocon de douceur. L'énergie va d'elle-même là où vous en avez le plus besoin, dénouant les nœuds émotionnels et apaisant le mental agité.</p>
-        <p style="font-style: italic; color: #4A2C4A; margin-top: 30px; border-left: 3px solid #D4AF37; padding-left: 20px;">Idéal pour : Stress, fatigue, équilibre émotionnel.</p>
+        <h2 style="text-align: left; margin: 0 0 30px 0;">Le Reiki Usui</h2>
+        <p>L'équilibre originel. Une méthode douce qui apaise le tumulte intérieur pour laisser place à une clarté profonde.</p>
+        <p>À <strong>Maraussan</strong>, je crée un espace neutre où votre corps peut enfin lâcher ses défenses et lancer son processus d'auto-guérison.</p>
+        <p style="color: #D4AF37; font-weight: 500; margin-top: 20px;">✦ Apaise le mental • Libère le stress • Harmonise</p>
       </div>
       <div class="bio-img">
-        <img src="assets/images/reiki-soin.jpg" alt="Soin Reiki" style="height: 400px; border-radius: 200px 200px 20px 20px; box-shadow: var(--soft-shadow);">
+        <img src="assets/images/reiki-soin.jpg" alt="Reiki" style="height: 400px; width: 350px;">
       </div>
     </div>
 
     <div class="cards-wrapper">
       <div class="floating-card">
-        <h3>Reiki en Cabinet</h3>
-        <p class="card-location">à Maraussan</p>
-        <div class="card-details">
-          Soin complet (1h) <span class="detail-separator">✦</span> Équilibrage Chakras <span class="detail-separator">✦</span> Ambiance Zen & Sonore
-        </div>
+        <h3>En Cabinet</h3>
+        <p class="card-location">Maraussan</p>
+        <div class="card-details">Soin Complet (1h) <span class="detail-separator">✦</span> Toucher léger</div>
         <span class="price">50 €</span>
-        <a href="mailto:votre-email@gmail.com" class="btn-card">RÉSERVER CE SOIN</a>
+        <a href="mailto:votre-email@gmail.com" class="btn-card">RÉSERVER</a>
       </div>
-
       <div class="floating-card">
-        <h3>Reiki à Distance</h3>
+        <h3>À Distance</h3>
         <p class="card-location">De chez vous</p>
-        <div class="card-details">
-          Soin complet (1h) <span class="detail-separator">✦</span> Mêmes bienfaits <span class="detail-separator">✦</span> Compte-rendu téléphonique
-        </div>
+        <div class="card-details">Soin Complet (1h) <span class="detail-separator">✦</span> Compte-rendu</div>
         <span class="price">50 €</span>
-        <a href="mailto:votre-email@gmail.com" class="btn-card">RÉSERVER CE SOIN</a>
+        <a href="mailto:votre-email@gmail.com" class="btn-card">RÉSERVER</a>
       </div>
     </div>
-
   </div>
 </section>
 
-<section class="section-aubergine">
+<section class="section-sand">
   <div class="container">
-    
-    <div class="bio-section" style="margin: 0 0 60px 0; gap: 80px; flex-direction: row-reverse;">
+    <div class="bio-section" style="gap: 80px; flex-direction: row-reverse;">
       <div class="bio-text">
-        <h2 style="text-align: left; margin: 0 0 30px 0; font-size: 2.5em; color: #4A2C4A;">La Lumière LaHoChi</h2>
-        <p>Si le Reiki est l'eau qui apaise, le LaHoChi est la lumière qui répare. C'est l'une des plus hautes fréquences de guérison disponibles aujourd'hui.</p>
-        <p>Ce soin est particulièrement puissant pour réparer les brèches énergétiques causées par des traumatismes ou des chocs émotionnels. Il restructure vos corps subtils et relance votre vitalité.</p>
-        <p style="font-style: italic; color: #4A2C4A; margin-top: 30px; border-left: 3px solid #D4AF37; padding-left: 20px;">Idéal pour : Traumatismes, blocages profonds, vitalité immédiate.</p>
+        <h2 style="text-align: left; margin: 0 0 30px 0;">Le LaHoChi</h2>
+        <p>La haute fréquence. Si le Reiki est l'eau, le LaHoChi est le feu solaire. Une énergie puissante qui répare les tissus énergétiques.</p>
+        <p>Idéal après un choc ou une période d'épuisement, il restructure vos corps subtils et comble les brèches énergétiques.</p>
+        <p style="color: #D4AF37; font-weight: 500; margin-top: 20px;">✦ Vitalité immédiate • Réparation • Haute Vibration</p>
       </div>
       <div class="bio-img">
-        <img src="assets/images/lahochi-soin.jpg" alt="Soin LaHoChi" style="height: 400px; border-radius: 200px 200px 20px 20px; box-shadow: var(--soft-shadow);">
+        <img src="assets/images/lahochi-soin.jpg" alt="LaHoChi" style="height: 400px; width: 350px;">
       </div>
     </div>
 
     <div class="cards-wrapper">
       <div class="floating-card">
-        <h3>LaHoChi Cabinet</h3>
-        <p class="card-location">à Maraussan</p>
-        <div class="card-details">
-          Haute Fréquence (1h) <span class="detail-separator">✦</span> Réparation Aurique <span class="detail-separator">✦</span> Vitalité immédiate
-        </div>
+        <h3>En Cabinet</h3>
+        <p class="card-location">Maraussan</p>
+        <div class="card-details">Haute Fréquence <span class="detail-separator">✦</span> Réparation</div>
         <span class="price">50 €</span>
-        <a href="mailto:votre-email@gmail.com" class="btn-card">RÉSERVER CE SOIN</a>
+        <a href="mailto:votre-email@gmail.com" class="btn-card">RÉSERVER</a>
       </div>
-
       <div class="floating-card">
-        <h3>LaHoChi Distance</h3>
+        <h3>À Distance</h3>
         <p class="card-location">De chez vous</p>
-        <div class="card-details">
-          Connexion à distance <span class="detail-separator">✦</span> Puissance intacte <span class="detail-separator">✦</span> Compte-rendu inclus
-        </div>
+        <div class="card-details">Connexion Puissante <span class="detail-separator">✦</span> Compte-rendu</div>
         <span class="price">50 €</span>
-        <a href="mailto:votre-email@gmail.com" class="btn-card">RÉSERVER CE SOIN</a>
+        <a href="mailto:votre-email@gmail.com" class="btn-card">RÉSERVER</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-dark">
+  <div class="container">
+    <div class="bio-section" style="gap: 80px;">
+      <div class="bio-text">
+        <h2 style="text-align: left; margin: 0 0 30px 0;">Activation Merkabah</h2>
+        <p>Le Véhicule de Lumière. Merkabah signifie "Char" en hébreu. C'est l'activation de votre géométrie sacrée personnelle.</p>
+        <p>Ce soin travaille sur l'expansion de conscience et l'alignement multidimensionnel. Une expérience immersive pour ceux qui cherchent à passer un cap spirituel.</p>
+        <p style="color: #D4AF37; font-weight: 500; margin-top: 20px;">✦ Géométrie Sacrée • Expansion • Ascension</p>
+      </div>
+      <div class="bio-img">
+        <img src="assets/images/merkaba-soin.jpg" alt="Merkabah" style="height: 400px; width: 350px; border-color: #D4AF37;">
       </div>
     </div>
 
+    <div class="cards-wrapper">
+      <div class="floating-card">
+        <h3>En Cabinet</h3>
+        <p class="card-location">Maraussan</p>
+        <div class="card-details">Activation (1h30) <span class="detail-separator">✦</span> Ancrage Profond</div>
+        <span class="price">70 €</span>
+        <a href="mailto:votre-email@gmail.com" class="btn-card">RÉSERVER</a>
+      </div>
+      <div class="floating-card">
+        <h3>À Distance</h3>
+        <p class="card-location">De chez vous</p>
+        <div class="card-details">Voyage Intérieur <span class="detail-separator">✦</span> Guidanc</div>
+        <span class="price">70 €</span>
+        <a href="mailto:votre-email@gmail.com" class="btn-card">RÉSERVER</a>
+      </div>
+    </div>
   </div>
 </section>

@@ -1,13 +1,13 @@
-/* --- CSS COMPLET ET DÉFINITIF : LUXE, ZEN & CONTRASTE --- */
+/* --- CSS FINAL : LUXE, CONTRASTE & PROFONDEUR --- */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 
 :root {
-  --primary: #4A2C4A;       /* Aubergine profond (Identité Luxe) */
-  --secondary: #D4AF37;     /* Or riche (Détails) */
-  --bg-cream: #FDFBF9;      /* Fond clair principal */
-  --bg-aubergine-light: #F4EFF4; /* Fond Aubergine très pâle (Section LaHoChi) */
-  --text-dark: #554a55;     /* Gris chaud */
-  --soft-shadow: 0 20px 40px rgba(74, 44, 74, 0.05); /* Ombre douce */
+  --primary: #4A2C4A;       /* Aubergine Profond */
+  --secondary: #D4AF37;     /* Or Vif */
+  --bg-cream: #FDFBF9;      /* Fond Clair (Reiki) */
+  --bg-sand: #F5F0EB;       /* Fond Sable Chaud (LaHoChi) - Moins blanc ! */
+  --text-dark: #3e3e3e;     /* Gris plus soutenu pour la lecture */
+  --soft-shadow: 0 20px 50px rgba(74, 44, 74, 0.1); /* Ombre marquée */
 }
 
 body {
@@ -15,135 +15,118 @@ body {
   color: var(--text-dark);
   font-family: 'Montserrat', sans-serif;
   margin: 0; padding: 0;
-  line-height: 2.0;
-  font-weight: 300;
+  line-height: 2.0; font-weight: 300;
 }
 
-/* --- TYPOGRAPHIE --- */
+/* TYPOGRAPHIE */
 h1, h2, h3, nav a { font-family: 'Playfair Display', serif; }
 
-h1 { font-size: 3.5em; color: var(--primary); margin-bottom: 0.2em; font-weight: 400; text-align: center; }
-h2 { font-size: 2.8em; color: var(--primary); text-align: center; font-style: italic; margin-top: 60px; margin-bottom: 40px; font-weight: 400; }
+h1 { font-size: 3.8em; color: var(--primary); margin-bottom: 0.2em; font-weight: 400; text-align: center; }
+h2 { font-size: 3em; color: var(--primary); text-align: center; font-style: italic; margin-top: 60px; margin-bottom: 40px; font-weight: 400; }
 
-/* --- HEADER & MENU --- */
+/* HEADER */
 header {
-  background: white;
-  padding: 15px 40px;
+  background: white; padding: 15px 40px;
   display: flex; justify-content: space-between; align-items: center;
   position: sticky; top: 0; z-index: 1000;
-  border-bottom: 1px solid rgba(74, 44, 74, 0.05);
+  border-bottom: 3px solid var(--secondary); /* Ligne Or pour souligner le menu */
 }
-
 .logo img { height: 75px; }
-
-nav a {
-  text-decoration: none; color: var(--text-dark); font-size: 0.9em;
-  text-transform: uppercase; letter-spacing: 2px; margin-left: 30px; transition: 0.3s;
-}
-nav a:hover { color: var(--primary); }
-
+nav a { text-decoration: none; color: var(--primary); font-size: 0.9em; text-transform: uppercase; letter-spacing: 2px; margin-left: 30px; font-weight: 500; transition: 0.3s; }
+nav a:hover { color: var(--secondary); }
 .social-icons a { color: var(--primary); font-size: 1.2em; margin-left: 15px; transition: 0.3s; }
-.social-icons a:hover { color: var(--secondary); }
 
-/* --- SECTIONS COLORÉES (Pour la page Soins) --- */
-.section-cream { background-color: var(--bg-cream); padding: 80px 20px; }
-.section-aubergine { 
-    background-color: var(--bg-aubergine-light); 
-    padding: 80px 20px; 
-    border-top: 1px solid rgba(74, 44, 74, 0.05);
-    border-bottom: 1px solid rgba(74, 44, 74, 0.05);
+/* --- LES 3 AMBIANCES (FONDS) --- */
+.section-cream { background-color: var(--bg-cream); padding: 100px 20px; }
+.section-sand { background-color: var(--bg-sand); padding: 100px 20px; border-top: 1px solid rgba(0,0,0,0.05); }
+
+/* La Section Merkabah (Foncée & Luxe) */
+.section-dark { 
+    background-color: var(--primary); /* Fond Aubergine */
+    color: white; /* Texte Blanc */
+    padding: 100px 20px; 
 }
+.section-dark h2 { color: var(--secondary); } /* Titre en Or sur fond sombre */
+.section-dark p { color: #e0e0e0; }
+.section-dark .detail-separator { color: var(--secondary); } 
 
-/* --- BANNIÈRE HERO (Page Formations & Autres) --- */
-.hero {
-  height: 60vh;
-  background-size: cover; background-position: center;
-  display: flex; align-items: center; justify-content: center; text-align: center;
-  position: relative; margin: 20px; border-radius: 30px; overflow: hidden;
-}
-.hero::before { content: ""; position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(255,255,255,0.15); }
-.hero-content { position: relative; z-index: 1; max-width: 900px; padding: 40px; background: rgba(255,255,255,0.9); border-radius: 20px; backdrop-filter: blur(5px); }
+/* BANNIÈRE HERO */
+.hero { height: 60vh; background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; margin: 0; }
+.hero-content { position: relative; z-index: 1; max-width: 900px; padding: 50px; background: rgba(255,255,255,0.95); border: 1px solid var(--secondary); backdrop-filter: blur(10px); }
 
-/* --- PAGE D'ACCUEIL (SPLIT SCREEN - A PROPOS) --- */
+/* SPLIT SCREEN (A PROPOS) */
 .split-screen { display: flex; min-height: 85vh; background-color: var(--bg-cream); }
 .split-text { flex: 1; padding: 60px 80px; display: flex; flex-direction: column; justify-content: center; }
 .split-image { flex: 1; position: relative; overflow: hidden; background-color: #ddd; }
-.slide-bg {
-  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-  background-size: cover; background-position: center; opacity: 0;
-  transition: opacity 2s ease-in-out; transform: scale(1.05);
-}
+.slide-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0; transition: opacity 2s ease-in-out; transform: scale(1.05); }
 .slide-bg.active { opacity: 1; transform: scale(1); transition: opacity 2s ease-in-out, transform 8s linear; }
 .editorial-title { font-size: 3.5em; color: var(--primary); line-height: 1.1; margin-bottom: 30px; font-style: italic; text-align: left; }
-.editorial-content { font-size: 1.05em; color: var(--text-dark); line-height: 1.9; text-align: justify; }
+.editorial-content { font-size: 1.1em; color: var(--text-dark); line-height: 1.9; text-align: justify; }
 
-/* --- BIO & PRÉSENTATION (ZIG ZAG) --- */
+/* ZIG ZAG LAYOUT */
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-.bio-section { display: flex; gap: 60px; align-items: center; justify-content: center; margin: 40px 0; }
-.bio-img img { object-fit: cover; box-shadow: var(--soft-shadow); }
+.bio-section { display: flex; gap: 80px; align-items: center; justify-content: center; margin-bottom: 60px; }
+.bio-img img { object-fit: cover; box-shadow: var(--soft-shadow); border: 2px solid white; }
 .bio-text { flex: 1; max-width: 600px; }
 
-/* --- CARTES LUXE (NOUVEAU DESIGN SANS PUCES) --- */
+/* --- CARTES LUXE (Retravaillées) --- */
 .cards-wrapper { display: flex; flex-wrap: wrap; gap: 50px; justify-content: center; }
 
 .floating-card {
-  background: white; width: 320px; padding: 50px 35px;
-  border-radius: 25px; box-shadow: var(--soft-shadow);
-  text-align: center; transition: transform 0.4s, box-shadow 0.4s;
-  border: 1px solid rgba(212, 175, 55, 0.3); position: relative; overflow: hidden;
+  background: white; width: 340px; padding: 50px 35px;
+  border-radius: 0; /* Retour aux angles droits pour plus de classe ? Non, gardons léger arrondi */
+  border-radius: 10px; 
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  text-align: center; transition: transform 0.4s;
+  border-top: 5px solid var(--primary); /* Ligne Aubergine en haut */
 }
-.floating-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(74, 44, 74, 0.1); border-color: var(--secondary); }
-.floating-card h3 { font-size: 1.8em; margin: 0 0 10px 0; color: var(--primary); font-weight: 400; }
-.card-location { font-style: italic; color: #888; margin-bottom: 30px; font-family: 'Playfair Display', serif; }
+.floating-card:hover { transform: translateY(-10px); border-top-color: var(--secondary); }
+.floating-card h3 { font-size: 1.8em; margin: 0 0 10px 0; color: var(--primary); }
+.card-location { font-style: italic; color: #999; margin-bottom: 30px; font-family: 'Playfair Display', serif; }
 .card-details { margin-bottom: 30px; color: var(--text-dark); font-size: 0.95em; line-height: 2.2; }
-.detail-separator { color: var(--secondary); margin: 0 10px; font-size: 0.8em; position: relative; top: -2px; }
-.price { font-family: 'Playfair Display', serif; font-size: 2.2em; color: var(--secondary); display: block; margin: 30px 0; font-style: italic; font-weight: 600; }
+.detail-separator { color: var(--secondary); margin: 0 8px; }
+.price { font-family: 'Playfair Display', serif; font-size: 2.5em; color: var(--secondary); display: block; margin: 30px 0; font-style: italic; font-weight: 500; }
 
 /* BOUTONS */
-.btn-card { /* Bouton Aubergine Plein */
-    background-color: var(--primary); color: white; padding: 15px 35px;
-    text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 0.85em;
-    text-transform: uppercase; letter-spacing: 2px; border-radius: 50px;
-    display: inline-block; transition: all 0.3s; box-shadow: 0 10px 20px rgba(74, 44, 74, 0.2); border: none;
+.btn-card { 
+    background-color: var(--primary); color: white; padding: 18px 40px;
+    text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 0.8em;
+    text-transform: uppercase; letter-spacing: 2px; 
+    display: inline-block; transition: all 0.3s; border: 1px solid var(--primary);
 }
-.btn-card:hover { background-color: var(--secondary); transform: translateY(-3px); box-shadow: 0 15px 30px rgba(212, 175, 55, 0.3); }
+.btn-card:hover { background-color: white; color: var(--primary); border-color: var(--primary); }
 
-.btn-outline { /* Bouton transparent (Formations) */
-    background: transparent; color: var(--text-dark); padding: 12px 35px;
-    border: 1px solid #ddd; border-radius: 50px; text-decoration: none;
+.btn-outline {
+    background: transparent; color: var(--text-dark); padding: 15px 40px;
+    border: 1px solid var(--primary); text-decoration: none;
     font-size: 0.8em; letter-spacing: 2px; text-transform: uppercase;
     display: inline-block; transition: 0.3s;
 }
-.btn-outline:hover { border-color: var(--secondary); color: var(--secondary); }
+.btn-outline:hover { background-color: var(--primary); color: white; }
 
-/* --- AVIS & CARROUSEL --- */
-.testimonials { margin-top: 100px; padding: 80px 20px; text-align: center; background: radial-gradient(circle, #fcfcfc 0%, #FDFBF9 70%); }
+/* AVIS & CHAT (Inchangé ou adapté couleurs) */
+.testimonials { padding: 100px 20px; text-align: center; background-color: #fcfcfc; }
 .carousel-container { max-width: 800px; margin: 0 auto; position: relative; }
 .carousel-slide { display: none; padding: 20px; animation: fade 1s; }
 .carousel-slide.active { display: block; }
-.avatar-wrapper { width: 80px; height: 80px; background: white; border-radius: 50%; margin: 0 auto 30px; display: flex; align-items: center; justify-content: center; font-size: 35px; box-shadow: var(--soft-shadow); }
-.stars { color: var(--secondary); letter-spacing: 8px; margin-bottom: 20px; display: block; }
-.quote { font-size: 1.3em; color: var(--primary); font-style: italic; line-height: 1.6; max-width: 700px; margin: 0 auto 30px; }
-.avatar-homme::before { content: "👨🏻"; } .avatar-femme::before { content: "👩🏻"; }
-.prev, .next { color: var(--secondary); cursor: pointer; position: absolute; top: 50%; padding: 10px; font-size: 30px; opacity: 0.7; }
-.next { right: -40px; } .prev { left: -40px; }
+.stars { color: var(--secondary); letter-spacing: 5px; margin-bottom: 20px; display: block; font-size: 1.2em; }
+.quote { font-size: 1.3em; color: var(--primary); font-style: italic; max-width: 700px; margin: 0 auto 30px; }
+.prev, .next { color: var(--secondary); cursor: pointer; position: absolute; top: 50%; padding: 10px; font-size: 30px; }
+.next { right: -50px; } .prev { left: -50px; }
 
-/* CHAT WIDGET */
+/* Chat */
 .chat-widget { position: fixed; bottom: 30px; right: 30px; z-index: 9999; display: flex; flex-direction: column; align-items: flex-end; }
-.chat-button { background-color: var(--primary); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 25px; box-shadow: 0 5px 20px rgba(74, 44, 74, 0.3); text-decoration: none; transition: transform 0.3s; }
-.chat-button:hover { transform: scale(1.1); background-color: var(--secondary); }
-.chat-message { background: white; padding: 20px; border-radius: 20px 20px 0 20px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); margin-bottom: 15px; max-width: 250px; font-size: 0.9em; line-height: 1.4; border: 1px solid #eee; }
+.chat-button { background-color: var(--secondary); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 25px; box-shadow: 0 5px 20px rgba(0,0,0,0.2); }
+.chat-message { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); margin-bottom: 15px; max-width: 250px; font-size: 0.9em; border: 1px solid var(--secondary); }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .split-screen { flex-direction: column-reverse; }
-  .split-image { height: 400px; min-height: 400px; }
-  .split-text { padding: 40px 20px; }
-  .bio-section { flex-direction: column !important; text-align: center; } /* Le !important force l'empilement sur mobile */
-  .bio-img img { width: 100%; height: auto; border-radius: 20px; }
+  .bio-section { flex-direction: column !important; text-align: center; }
+  .bio-img img { width: 100%; height: auto; }
   header { flex-direction: column; gap: 15px; }
   nav a { display: block; margin: 10px 0; }
-  .prev { left: 0; } .next { right: 0; }
+  .next { right: 0; } .prev { left: 0; }
 }
 
 @keyframes fade { from {opacity: 0} to {opacity: 1} }
